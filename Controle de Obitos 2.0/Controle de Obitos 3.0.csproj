@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05178D53-FC12-4197-965E-693C2BFFBC93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Controle_de_Obitos_2._0</RootNamespace>
+    <AssemblyName>Controle de Obitos 2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>Z:\Controle de Obitos\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>37</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>812BA3950019197D5592D4B2492D0A30FC4F23C5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Controle de Obitos 2.0_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdicionarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarMedico.Designer.cs">
+      <DependentUpon>AdicionarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComandBD.cs" />
+    <Compile Include="ControleDB.cs" />
+    <Compile Include="ConexaoDB.cs" />
+    <Compile Include="ChangePasswordScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordScreen.Designer.cs">
+      <DependentUpon>ChangePasswordScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controle_de_obitosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>controle_de_obitosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="controle_de_obitosDataSet1.cs">
+      <DependentUpon>controle_de_obitosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="controle_de_obitosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>controle_de_obitosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="controle_de_obitosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>controle_de_obitosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="controle_de_obitosDataSet3.cs">
+      <DependentUpon>controle_de_obitosDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="controle_de_obitosDataSet3.Designer.cs">
+      <DependentUpon>controle_de_obitosDataSet3.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DadosDoObito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DadosDoObito.Designer.cs">
+      <DependentUpon>DadosDoObito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeclaracaoDeObitoDB.cs" />
+    <Compile Include="DoctorsDB.cs" />
+    <Compile Include="ExcluirDO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirDO.Designer.cs">
+      <DependentUpon>ExcluirDO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirObito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirObito.Designer.cs">
+      <DependentUpon>ExcluirObito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirUsuario.Designer.cs">
+      <DependentUpon>ExcluirUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarObitoDB.cs" />
+    <Compile Include="UserDB.cs" />
+    <EmbeddedResource Include="AdicionarMedico.resx">
+      <DependentUpon>AdicionarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordScreen.resx">
+      <DependentUpon>ChangePasswordScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DadosDoObito.resx">
+      <DependentUpon>DadosDoObito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirDO.resx">
+      <DependentUpon>ExcluirDO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirObito.resx">
+      <DependentUpon>ExcluirObito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirUsuario.resx">
+      <DependentUpon>ExcluirUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Controle de Obitos 3.0_TemporaryKey.pfx" />
+    <None Include="controle_de_obitosDataSet.xsc">
+      <DependentUpon>controle_de_obitosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>controle_de_obitosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="controle_de_obitosDataSet.xss">
+      <DependentUpon>controle_de_obitosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet1.xsc">
+      <DependentUpon>controle_de_obitosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>controle_de_obitosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="controle_de_obitosDataSet1.xss">
+      <DependentUpon>controle_de_obitosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet2.xsc">
+      <DependentUpon>controle_de_obitosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>controle_de_obitosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="controle_de_obitosDataSet2.xss">
+      <DependentUpon>controle_de_obitosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet3.xsc">
+      <DependentUpon>controle_de_obitosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="controle_de_obitosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>controle_de_obitosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="controle_de_obitosDataSet3.xss">
+      <DependentUpon>controle_de_obitosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\295128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\295128-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47774.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

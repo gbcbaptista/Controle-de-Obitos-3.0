@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="controle_de_obitosDataSet" targetNamespace="http://tempuri.org/controle_de_obitosDataSet.xsd" xmlns:mstns="http://tempuri.org/controle_de_obitosDataSet.xsd" xmlns="http://tempuri.org/controle_de_obitosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="controle_de_obitosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="controle_de_obitosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Controle_de_Obitos_2._0.Properties.Settings.GlobalReference.Default.controle_de_obitosConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="declaracao_de_obitosTableAdapter" GeneratorDataComponentClassName="declaracao_de_obitosTableAdapter" Name="declaracao_de_obitos" UserDataComponentName="declaracao_de_obitosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectName="controle_de_obitos.declaracao_de_obitos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Numero_da_DO,
+CASE STATUS_da_DO
+	
+WHEN 1 THEN 'Dísponivel'
+WHEN 2 THEN 'Usada'	
+WHEN 3 THEN 'Cancelada' END AS Status, data_insercao_do,
+CASE PROAIM
+WHEN 1 THEN 'Pendente'
+WHEN 2 THEN 'Enviado'END AS PROAIM
+FROM controle_de_obitos.declaracao_de_obitos WHERE STATUS_da_DO = 3
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Numero_da_DO" DataSetColumn="Numero_da_DO" />
+              <Mapping SourceColumn="data_insercao_do" DataSetColumn="data_insercao_do" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="PROAIM" DataSetColumn="PROAIM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="controle_de_obitosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="controle_de_obitosDataSet" msprop:Generator_UserDSName="controle_de_obitosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="declaracao_de_obitos" msprop:Generator_TableClassName="declaracao_de_obitosDataTable" msprop:Generator_TableVarName="tabledeclaracao_de_obitos" msprop:Generator_TablePropName="declaracao_de_obitos" msprop:Generator_RowDeletingName="declaracao_de_obitosRowDeleting" msprop:Generator_RowChangingName="declaracao_de_obitosRowChanging" msprop:Generator_RowEvHandlerName="declaracao_de_obitosRowChangeEventHandler" msprop:Generator_RowDeletedName="declaracao_de_obitosRowDeleted" msprop:Generator_UserTableName="declaracao_de_obitos" msprop:Generator_RowChangedName="declaracao_de_obitosRowChanged" msprop:Generator_RowEvArgName="declaracao_de_obitosRowChangeEvent" msprop:Generator_RowClassName="declaracao_de_obitosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_da_DO" msprop:Generator_ColumnVarNameInTable="columnNumero_da_DO" msprop:Generator_ColumnPropNameInRow="Numero_da_DO" msprop:Generator_ColumnPropNameInTable="Numero_da_DOColumn" msprop:Generator_UserColumnName="Numero_da_DO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="data_insercao_do" msprop:Generator_ColumnVarNameInTable="columndata_insercao_do" msprop:Generator_ColumnPropNameInRow="data_insercao_do" msprop:Generator_ColumnPropNameInTable="data_insercao_doColumn" msprop:Generator_UserColumnName="data_insercao_do" type="xs:dateTime" />
+              <xs:element name="Status" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROAIM" msprop:Generator_ColumnVarNameInTable="columnPROAIM" msprop:Generator_ColumnPropNameInRow="PROAIM" msprop:Generator_ColumnPropNameInTable="PROAIMColumn" msprop:Generator_UserColumnName="PROAIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

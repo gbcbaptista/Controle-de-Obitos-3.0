@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="controle_de_obitosDataSet3" targetNamespace="http://tempuri.org/controle_de_obitosDataSet3.xsd" xmlns:mstns="http://tempuri.org/controle_de_obitosDataSet3.xsd" xmlns="http://tempuri.org/controle_de_obitosDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="controle_de_obitosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="controle_de_obitosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Controle_de_Obitos_2._0.Properties.Settings.GlobalReference.Default.controle_de_obitosConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="obitosTableAdapter" GeneratorDataComponentClassName="obitosTableAdapter" Name="obitos" UserDataComponentName="obitosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+ORDER BY o.Data_do_obito</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nome_Do_Paciente" DataSetColumn="Nome_Do_Paciente" />
+              <Mapping SourceColumn="DO_Number" DataSetColumn="DO_Number" />
+              <Mapping SourceColumn="Doctor_Name" DataSetColumn="Doctor_Name" />
+              <Mapping SourceColumn="Data_do_obito" DataSetColumn="Data_do_obito" />
+              <Mapping SourceColumn="CRM" DataSetColumn="CRM" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="ABRIL" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="ABRIL" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ABRIL">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+WHERE o.Data_do_obito BETWEEN '2021-04-01' AND '2021-04-30'
+ORDER BY o.Data_do_obito</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FEVEREIRO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FEVEREIRO" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FEVEREIRO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+WHERE o.Data_do_obito BETWEEN '2021-02-01' AND '2021-02-28'
+ORDER BY o.Data_do_obito</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="JANEIRO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="JANEIRO" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="JANEIRO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+WHERE o.Data_do_obito BETWEEN '2021-01-01' AND '2021-01-31'
+ORDER BY o.Data_do_obito
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="JUNHO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy5" GeneratorSourceName="JUNHO" GetMethodModifier="Public" GetMethodName="GetDataBy5" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="JUNHO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+WHERE o.Data_do_obito BETWEEN '2021-06-01' AND '2021-06-30'
+ORDER BY o.Data_do_obito</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="MAIO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy4" GeneratorSourceName="MAIO" GetMethodModifier="Public" GetMethodName="GetDataBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="MAIO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+WHERE o.Data_do_obito BETWEEN '2021-05-01' AND '2021-05-31'
+ORDER BY o.Data_do_obito</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="controle_de_obitosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="MARÇO" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="MARÇO" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="MARÇO">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT o.Data_do_obito, o.DO_Number, o.Nome_Do_Paciente, o.Doctor_Name, d.CRM FROM obitos o
+INNER JOIN doctor d ON d.Nome_do_Medico = o.Doctor_Name
+WHERE o.Data_do_obito BETWEEN '2021-03-01' AND '2021-03-31'
+ORDER BY o.Data_do_obito</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="controle_de_obitosDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="controle_de_obitosDataSet3" msprop:Generator_UserDSName="controle_de_obitosDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="obitos" msprop:Generator_TableClassName="obitosDataTable" msprop:Generator_TableVarName="tableobitos" msprop:Generator_RowChangedName="obitosRowChanged" msprop:Generator_TablePropName="obitos" msprop:Generator_RowDeletingName="obitosRowDeleting" msprop:Generator_RowChangingName="obitosRowChanging" msprop:Generator_RowEvHandlerName="obitosRowChangeEventHandler" msprop:Generator_RowDeletedName="obitosRowDeleted" msprop:Generator_RowClassName="obitosRow" msprop:Generator_UserTableName="obitos" msprop:Generator_RowEvArgName="obitosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nome_Do_Paciente" msprop:Generator_ColumnVarNameInTable="columnNome_Do_Paciente" msprop:Generator_ColumnPropNameInRow="Nome_Do_Paciente" msprop:Generator_ColumnPropNameInTable="Nome_Do_PacienteColumn" msprop:Generator_UserColumnName="Nome_Do_Paciente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DO_Number" msprop:Generator_ColumnVarNameInTable="columnDO_Number" msprop:Generator_ColumnPropNameInRow="DO_Number" msprop:Generator_ColumnPropNameInTable="DO_NumberColumn" msprop:Generator_UserColumnName="DO_Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Doctor_Name" msprop:Generator_ColumnVarNameInTable="columnDoctor_Name" msprop:Generator_ColumnPropNameInRow="Doctor_Name" msprop:Generator_ColumnPropNameInTable="Doctor_NameColumn" msprop:Generator_UserColumnName="Doctor_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_do_obito" msprop:Generator_ColumnVarNameInTable="columnData_do_obito" msprop:Generator_ColumnPropNameInRow="Data_do_obito" msprop:Generator_ColumnPropNameInTable="Data_do_obitoColumn" msprop:Generator_UserColumnName="Data_do_obito" type="xs:dateTime" />
+              <xs:element name="CRM" msprop:Generator_ColumnVarNameInTable="columnCRM" msprop:Generator_ColumnPropNameInRow="CRM" msprop:Generator_ColumnPropNameInTable="CRMColumn" msprop:Generator_UserColumnName="CRM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
