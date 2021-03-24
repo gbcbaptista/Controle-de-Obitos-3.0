@@ -30,7 +30,7 @@ namespace Controle_de_Obitos_2._0
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirObito));
-            this.btnRegistraMedico = new System.Windows.Forms.Button();
+            this.btnExcluirÓbito = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCRM = new System.Windows.Forms.Label();
@@ -39,19 +39,19 @@ namespace Controle_de_Obitos_2._0
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnRegistraMedico
+            // btnExcluirÓbito
             // 
-            this.btnRegistraMedico.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.btnRegistraMedico.FlatAppearance.BorderSize = 0;
-            this.btnRegistraMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistraMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistraMedico.Location = new System.Drawing.Point(541, 214);
-            this.btnRegistraMedico.Name = "btnRegistraMedico";
-            this.btnRegistraMedico.Size = new System.Drawing.Size(118, 45);
-            this.btnRegistraMedico.TabIndex = 20;
-            this.btnRegistraMedico.Text = "Registrar Médico";
-            this.btnRegistraMedico.UseVisualStyleBackColor = false;
-            this.btnRegistraMedico.Click += new System.EventHandler(this.btnRegistraMedico_Click);
+            this.btnExcluirÓbito.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnExcluirÓbito.FlatAppearance.BorderSize = 0;
+            this.btnExcluirÓbito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirÓbito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirÓbito.Location = new System.Drawing.Point(541, 214);
+            this.btnExcluirÓbito.Name = "btnExcluirÓbito";
+            this.btnExcluirÓbito.Size = new System.Drawing.Size(118, 45);
+            this.btnExcluirÓbito.TabIndex = 20;
+            this.btnExcluirÓbito.Text = "Excluir Óbito";
+            this.btnExcluirÓbito.UseVisualStyleBackColor = false;
+            this.btnExcluirÓbito.Click += new System.EventHandler(this.btnExcluirObito_Click);
             // 
             // groupBox1
             // 
@@ -108,7 +108,7 @@ namespace Controle_de_Obitos_2._0
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(683, 271);
-            this.Controls.Add(this.btnRegistraMedico);
+            this.Controls.Add(this.btnExcluirÓbito);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExcluirObito";
@@ -121,7 +121,7 @@ namespace Controle_de_Obitos_2._0
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegistraMedico;
+        private System.Windows.Forms.Button btnExcluirÓbito;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCRM;

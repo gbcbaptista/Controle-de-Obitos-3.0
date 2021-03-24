@@ -17,7 +17,7 @@ namespace Controle_de_Obitos_2._0
             InitializeComponent();
         }
 
-        private void btnRegistraMedico_Click(object sender, EventArgs e)
+        private void btnExcluirObito_Click(object sender, EventArgs e)
         {
             if (txtBoxNomeDoPaciente.Text != String.Empty && txtBoxNumeroDaDO.Text != String.Empty)
             {
@@ -29,11 +29,19 @@ namespace Controle_de_Obitos_2._0
                 ComandBD.ComandDeleteToBD(SQLCommand);
                 txtBoxNomeDoPaciente.Text = String.Empty;
                 txtBoxNumeroDaDO.Text = String.Empty;
+                makeDoFreeForUse(do_delete);
             }
             else
             {
                 MessageBox.Show("Preencha os dois campos!");
             }
+
+        }
+
+        private void makeDoFreeForUse(string numero_DO)
+        {
+            string SQLCommand = "UPDATE `controle_de_obitos`.`declaracao_de_obitos` SET `Status_da_DO` = '1' WHERE(`Numero_da_DO` = " + numero_DO + ");";
+            ComandBD.ComandUpdateBD(SQLCommand);
         }
     }
 }

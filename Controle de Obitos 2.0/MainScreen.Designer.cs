@@ -439,13 +439,13 @@ namespace Controle_de_Obitos_2._0
             // 
             // pnlPagesBackground
             // 
-            this.pnlPagesBackground.Controls.Add(this.pnlAdm);
-            this.pnlPagesBackground.Controls.Add(this.pnlPROAIM);
             this.pnlPagesBackground.Controls.Add(this.pnlVizualizarDos);
             this.pnlPagesBackground.Controls.Add(this.pnlVizualizarObitos);
             this.pnlPagesBackground.Controls.Add(this.pnlCadastrarObitos);
             this.pnlPagesBackground.Controls.Add(this.pnlHome);
             this.pnlPagesBackground.Controls.Add(this.pnlIndicadores);
+            this.pnlPagesBackground.Controls.Add(this.pnlAdm);
+            this.pnlPagesBackground.Controls.Add(this.pnlPROAIM);
             this.pnlPagesBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPagesBackground.Location = new System.Drawing.Point(0, 70);
             this.pnlPagesBackground.Margin = new System.Windows.Forms.Padding(0);
@@ -856,9 +856,9 @@ namespace Controle_de_Obitos_2._0
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 15);
+            this.label6.Size = new System.Drawing.Size(169, 15);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Digite o numero da DO:";
+            this.label6.Text = "Digite o nome do Pacote:";
             // 
             // btnInsereNovaDO
             // 

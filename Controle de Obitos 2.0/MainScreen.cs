@@ -427,6 +427,18 @@ namespace Controle_de_Obitos_2._0
         {
             findDOsDisponiveis();
         }
+        
+        private void btnInsereNovaDO_Click(object sender, EventArgs e)
+        {
+            if (txtDOinsert.Text != "")
+            {
+                InsereDOFunction();
+            }
+            else
+            {
+                MessageBox.Show("Nome do pacote deve seguir o padrão do numero da primeira DO 'até' numero da ultima DO Ex: '123456789-0 até 123456789-1'");
+            }
+        }
         public void InsereDOFunction()
         {
             if (Login.access > 2)
@@ -439,18 +451,6 @@ namespace Controle_de_Obitos_2._0
                 txtDOinsert.Text = String.Empty;
                 findDOsDisponiveis();
             }
-        }
-        private void btnInsereNovaDO_Click(object sender, EventArgs e)
-        {
-            if (txtDOinsert.Text != "")
-            {
-                InsereDOFunction();
-            }
-            else
-            {
-                MessageBox.Show("Numero da DO deve ter 9 caracteres!");
-            }
-            
         }
 
         private void textChangeVerifyDOforCadastro(object sender, EventArgs e)
@@ -465,17 +465,13 @@ namespace Controle_de_Obitos_2._0
         {
             lblOk2.Visible = false;
             findDOsDisponiveisParaCancelar();
-            
         }
         public void levarParaPROAIM(int contador)
         {
             MySqlConnection conexao = ConexaoDB.getInstancia().getConexao();
-
             try
             {
                 MySqlCommand comando = ConexaoDB.openConexao(conexao);
-                
-
                 for (int i = 0; i < contador; i++)
                 {
                     listBoxLevarAoPROAIM.SetSelected(i, true);

@@ -16,11 +16,8 @@ namespace Controle_de_Obitos_2._0
             try
             {
                 MySqlCommand comando = ConexaoDB.openConexao(conexao);
-
                 comando.CommandText = SQLComand;
-
                 MySqlDataReader reader = comando.ExecuteReader();
-
                 while (reader.Read())
                 {
                     DataFunction(reader);
@@ -45,9 +42,7 @@ namespace Controle_de_Obitos_2._0
             try
             {
                 MySqlCommand comando = ConexaoDB.openConexao(conexao);
-
                 comando.CommandText = SQLComand;
-
                 int valorRetorno = comando.ExecuteNonQuery();
                 if (valorRetorno < 1)
                 {
@@ -76,19 +71,8 @@ namespace Controle_de_Obitos_2._0
                 try
                 {
                     MySqlCommand comando = ConexaoDB.openConexao(conexao);
-
                     comando.CommandText = SQLComand;
-
                     int valorRetorno = comando.ExecuteNonQuery();
-
-                    /*if (valorRetorno < 1)
-                    {
-                        MessageBox.Show("Falha ao excluir...");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Exclusão realizada com Sucesso!");
-                    }*/
                 }
                 catch (MySqlException msql)
                 {
@@ -99,12 +83,35 @@ namespace Controle_de_Obitos_2._0
                     conexao.Close();
                 }
 
-                //Sua rotina de exclusão
-                //Confirmando exclusão para o usuário
                 MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
 
+        public static void ComandUpdateBD(string SQLComand)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja atualizar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            {
+                MySqlConnection conexao = ConexaoDB.getInstancia().getConexao();
+                try
+                {
+                    MySqlCommand comando = ConexaoDB.openConexao(conexao);
+                    comando.CommandText = SQLComand;
+                    int valorRetorno = comando.ExecuteNonQuery();
+                }
+                catch (MySqlException msql)
+                {
+                    MessageBox.Show(msql.Message);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                MessageBox.Show("Registro atualizado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+        
     }
 }
